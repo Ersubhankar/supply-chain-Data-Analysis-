@@ -62,20 +62,28 @@ The dataset contains **100 records and 24 features** capturing end-to-end supply
 
 ## 🛠 Project Architecture & Workflow
 
-┌───────────────────────────────┐│     
-Raw Supply Chain Data     
-│└───────────────┬───────────────┘
-│▼┌───────────────────────────────┐│     
-Data Quality Auditing     │  --> Inspect Missing Values & Types
+┌───────────────────────────────┐
+│     Raw Supply Chain Data     │
 └───────────────┬───────────────┘
-│▼┌───────────────────────────────┐│  
-Cleaning & Preprocessing     │  --> Case Uniformity, Filtering Non-Positive Values, Rounding
+│
+▼
+┌───────────────────────────────┐
+│     Data Quality Auditing     │  --> Inspect Missing Values & Types
 └───────────────┬───────────────┘
-│▼┌───────────────────────────────┐│ 
-Statistical Analysis & EDA    │  --> Metrics Summaries, Revenue Analysis
+│
+▼
+┌───────────────────────────────┐
+│  Cleaning & Preprocessing     │  --> Case Uniformity, Filtering Non-Positive Values, Rounding
 └───────────────┬───────────────┘
-│▼┌───────────────────────────────┐│   
-Visualizations & Insights   │  --> Correlation Heatmap, Bar Plots, Export Metrics
+│
+▼
+┌───────────────────────────────┐
+│ Statistical Analysis & EDA    │  --> Metrics Summaries, Revenue Analysis
+└───────────────┬───────────────┘
+│
+▼
+┌───────────────────────────────┐
+│   Visualizations & Insights   │  --> Correlation Heatmap, Bar Plots, Export Metrics
 └───────────────────────────────┘
 
 ## 💻 Technologies & Libraries Used
