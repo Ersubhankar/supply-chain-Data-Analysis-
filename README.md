@@ -65,22 +65,22 @@ The dataset contains **100 records and 24 features** capturing end-to-end supply
 
 Raw Supply Chain Data 
 
-│
-▼
+        │
+        ▼
 Data Quality Auditing --> Inspect Missing Values & Types
 
-│
-▼
+        │
+        ▼
 
 Cleaning & Preprocessing --> Case Uniformity, Filtering Non-Positive Values, Rounding
 
-│
-▼
+        │
+        ▼
 
 Statistical Analysis & EDA --> Metrics Summaries, Revenue Analysis
 
-│
-▼
+        │
+        ▼
 
 Visualizations & Insights --> Correlation Heatmap, Bar Plots, Export Metrics
 
