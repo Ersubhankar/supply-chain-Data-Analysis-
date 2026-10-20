@@ -104,16 +104,19 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 Install DependenciesBashpip install pandas numpy matplotlib seaborn openpyxl
 Run the Analysis Notebook / ScriptBashjupyter notebook supply_chain_analysis.ipynb
 
-🧹 Data Cleaning & Preprocessing PipelineThe data cleaning pipeline executes the following steps sequentially to guarantee data integrity:Missing & Dirty Value Normalization:Replaces placeholder strings ('N/A', 'NULL', '', ' ') with np.nan.Text Normalization:Strips leading and trailing spaces from string entries and applies title casing to categories (e.g., converting 'FEMALE' / 'female' → 'Female').Invalid/Outlier Value Filtering:Removes records containing negative or zero values across key operational metrics (Price, Availability, Stock levels, Lead times, Manufacturing costs, Defect rates, Shipping costs, Costs).Precision Formatting:Rounds financial and metric columns (Price, Revenue generated, Shipping costs, Manufacturing costs, Defect rates, Costs) to two decimal places.📈 Exploratory Data Analysis (EDA) & InsightsKey Operational Metrics Summary (Post-Cleaning)Mean Selling Price: ~$49.97Mean Revenue Generated: ~$5,765.83 per product entryAverage Defect Rate: ~2.30%Average Manufacturing Cost: ~$46.26Revenue Breakdown by Product CategoryProduct TypeRevenue Generated ($)Skincare$187,672.40Haircare$161,327.45Cosmetics$154,003.91Skincare generates the highest overall revenue, making it the primary driver of top-line growth.Generated Visualizationscorrelation_matrix.png: Heatmap illustrating relationships between lead times, defect rates, shipping costs, and generated revenue.revenue_by_product_type.png: Bar plot showcasing revenue distribution across product lines.📁 Repository Structure├── data/
-│   └── supply_chain_data.xlsx      # Primary input dataset
+🧹 Data Cleaning & Preprocessing PipelineThe data cleaning pipeline executes the following steps sequentially to guarantee data integrity:Missing & Dirty Value Normalization:Replaces placeholder strings ('N/A', 'NULL', '', ' ') with np.nan.Text Normalization:Strips leading and trailing spaces from string entries and applies title casing to categories (e.g., converting 'FEMALE' / 'female' → 'Female').Invalid/Outlier Value Filtering:Removes records containing negative or zero values across key operational metrics (Price, Availability, Stock levels, Lead times, Manufacturing costs, Defect rates, Shipping costs, Costs).Precision Formatting:Rounds financial and metric columns (Price, Revenue generated, Shipping costs, Manufacturing costs, Defect rates, Costs) to two decimal places.📈 Exploratory Data Analysis (EDA) & InsightsKey Operational Metrics Summary (Post-Cleaning)Mean Selling Price: ~$49.97Mean Revenue Generated: ~$5,765.83 per product entryAverage Defect Rate: ~2.30%Average Manufacturing Cost: ~$46.26Revenue Breakdown by Product CategoryProduct TypeRevenue Generated ($)Skincare$187,672.40Haircare$161,327.45Cosmetics$154,003.91Skincare generates the highest overall revenue, making it the primary driver of top-line growth.Generated Visualizationscorrelation_matrix.png: Heatmap illustrating relationships between lead times, defect rates, shipping costs, and generated revenue.revenue_by_product_type.png: Bar plot showcasing revenue distribution across product lines.
+
+📁 Repository Structure├── data/
+   └── supply_chain_data.xlsx      # Primary input dataset
 
 ├── output/
    ├── correlation_matrix.png       # Generated correlation plot
    └── revenue_by_product_type.png # Revenue distribution chart
 
 ├── supply_chain_analysis.ipynb      # Main Jupyter notebook containing code & analysis
+
 ├── README.md                        # Project documentation
-└── requirements.txt                 # Dependencies list
+
 
 🔮 Future Enhancements
 [ ] Build a predictive machine learning model to forecast product demand and stockouts.
